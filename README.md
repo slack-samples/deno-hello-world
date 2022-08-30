@@ -1,7 +1,7 @@
 # Deno Hello World App
 
-This sample app demonstrates how to use a function, workflow, and trigger to send
-a greeting to channel.
+This sample app demonstrates how to use a function, workflow, and trigger to
+send a greeting to channel.
 
 Before getting started, make sure you have a development workspace where you
 have permissions to install apps. If you don’t have one set up, go ahead and
@@ -48,8 +48,8 @@ $ slack deploy
 
 ### `manifest.ts`
 
-Contains the app's configuration. This file defines attributes like app name and
-description.
+The [app manifest](https://api.slack.com/future/manifest) contains the app's
+configuration. This file defines attributes like app name and description.
 
 ### `slack.json`
 
@@ -72,8 +72,9 @@ via form before continuing to the next step.
 
 ### `/triggers`
 
-[Triggers](https://api.slack.com/future/triggers) are how Workflows are
-executed.
+[Triggers](https://api.slack.com/future/triggers) determine when Workflows are
+executed. A trigger file describes a scenario in which a workflow should be run,
+such as a user pressing a button or when a specific event occurs.
 
 ## Resources
 
