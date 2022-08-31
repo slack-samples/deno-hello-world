@@ -43,7 +43,7 @@ For an example of how to test a function, see
 Run all tests with `deno test`:
 
 ```zsh
-$ slack deno test
+$ deno test
 ```
 
 ## Deploying Your App
