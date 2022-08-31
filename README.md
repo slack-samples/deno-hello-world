@@ -1,4 +1,4 @@
-# Deno Hello World App
+# Deno Hello World
 
 This sample app demonstrates how to use a function, workflow, and trigger to
 send a greeting to channel.
@@ -11,7 +11,7 @@ have permissions to install apps. If you don’t have one set up, go ahead and
 
 ### Install the Slack CLI
 
-To use this sample, you first need install and configure the Slack CLI.
+To use this template, you first need to install and configure the Slack CLI.
 Step-by-step instructions can be found in our
 [Quickstart Guide](https://api.slack.com/future/quickstart).
 
@@ -23,7 +23,7 @@ because the name has the string `(dev)` appended.
 
 ```zsh
 # Clone this project onto your machine
-$ slack create my-app -t slack-samples/deno-hello-world
+$ slack create my-app -t slack-samples/deno-starter-template
 
 # Change into this project directory
 $ cd my-app
@@ -34,13 +34,24 @@ $ slack run
 Connected, awaiting events
 ```
 
-## Deploying Your App
+## Testing
 
-When you're done with development, you can deploy your app to Slack using
-`slack deploy`:
+For an example of how to test a function, see
+`functions/greeting_function_test.ts`. Test filenames should be suffixed with
+`_test`.
+
+Run all tests with `deno test`:
 
 ```zsh
-# Deploy to a production workspace
+$ slack deno test
+```
+
+## Deploying Your App
+
+When you're done with development, you can deploy your app to a production
+workspace using `slack deploy`:
+
+```zsh
 $ slack deploy
 ```
 
