@@ -23,7 +23,7 @@ because the name has the string `(dev)` appended.
 
 ```zsh
 # Clone this project onto your machine
-$ slack create my-app -t slack-samples/deno-starter-template
+$ slack create my-app -t slack-samples/deno-hello-world
 
 # Change into this project directory
 $ cd my-app
