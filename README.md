@@ -9,6 +9,8 @@ have permissions to install apps. If you don’t have one set up, go ahead and
 
 ## Demo
 
+First, make sure your CLI is [authorized]([https://api.slack.com/future/](https://api.slack.com/future/quickstart#authorize-cli) to your workspace. 
+
 To run this app in your workspace, first create a new app and select the 
 "Hello World" template:
 
@@ -24,12 +26,47 @@ Select from a template to build from:
 This will create a new Run On Slack app project that you can install into 
 your workspace. 
 
-Change directories into your project's folder, then deploy your app so that
-we can build a [Shortcut trigger](https://api.slack.com/future/triggers/shortcut)
+Change directories into your project's folder, then deploy your app:
 
-hermes trigger create --trigger-def "./triggers/greeting_trigger.ts"
+```zsh
+$ slack deploy
+```
 
+Once your app is fully deployed, you can now build a 
+[Shortcut trigger](https://api.slack.com/future/triggers/shortcut):
 
+```zsh
+$ slack trigger create --trigger-def "./triggers/greeting_trigger.ts"
+```
+
+You'll know the trigger was created when you see something like this:
+
+```zsh
+⚡ Trigger created
+   Trigger ID:   Ft01234567
+   Trigger Type: shortcut
+   Trigger Name: Send a greeting
+   URL: https://slack.com/shortcuts/Ft041GUKKFEE/753834685412dfbbf4d58998c1b56933
+```
+
+Copy the `URL` from the terminal output and paste it into any public channel
+in your workspace. This will unfurl into a card with a **Run** button. You will 
+also see your shortcut in the bookmarks bar in the `Workflows` folder. 
+
+Next, start your development server:
+
+```zsh
+$ slack run
+```
+
+Once your development server is running, click the run button on the unfurl card or 
+select your shortcut's name from the `Workflows` folder in the bookmark bar to 
+start the workflow assigned to that trigger.
+
+In the modal that pops up, fill out the form and click the **Send greeting** button.
+
+In the channel you executed the workflow from, you'll see a new message 
+for the user you selected in the form. 
 
 ## Setup
 
