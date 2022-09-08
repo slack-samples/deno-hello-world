@@ -7,6 +7,30 @@ Before getting started, make sure you have a development workspace where you
 have permissions to install apps. If you don’t have one set up, go ahead and
 [create one](https://slack.com/create).
 
+## Demo
+
+To run this app in your workspace, first create a new app and select the 
+"Hello World" template:
+
+```zsh
+$ slack create my-app
+Select from a template to build from:
+
+> Hello World
+  A simple workflow that sends a greeting
+
+```
+
+This will create a new Run On Slack app project that you can install into 
+your workspace. 
+
+Change directories into your project's folder, then deploy your app so that
+we can build a [Shortcut trigger](https://api.slack.com/future/triggers/shortcut)
+
+hermes trigger create --trigger-def "./triggers/greeting_trigger.ts"
+
+
+
 ## Setup
 
 ### Install the Slack CLI
