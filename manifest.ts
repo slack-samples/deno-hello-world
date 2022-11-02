@@ -10,7 +10,7 @@ export default Manifest({
   name: "deno-hello-world",
   description:
     "A sample that demonstrates using a function, workflow and trigger to send a greeting",
-  icon: "assets/icon.png",
+  icon: "assets/default_new_app_icon.png",
   workflows: [GreetingWorkflow],
   outgoingDomains: [],
   botScopes: ["commands", "chat:write", "chat:write.public"],
