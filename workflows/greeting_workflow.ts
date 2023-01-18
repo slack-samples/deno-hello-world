@@ -2,8 +2,8 @@ import { DefineWorkflow, Schema } from "deno-slack-sdk/mod.ts";
 import { GreetingFunctionDefinition } from "../functions/greeting_function.ts";
 
 /**
- * A Workflow is a set of steps that are executed in order.
- * Each step in a Workflow is a function.
+ * A workflow is a set of steps that are executed in order.
+ * Each step in a workflow is a function.
  * https://api.slack.com/future/workflows
  */
 const GreetingWorkflow = DefineWorkflow({
