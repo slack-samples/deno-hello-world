@@ -8,6 +8,7 @@ on:
 
 jobs:
   deno:
+    if: github.repository == 'slack-samples/deno-hello-world'
     runs-on: ubuntu-latest
     timeout-minutes: 5
 
