@@ -22,7 +22,7 @@ export const GreetingFunctionDefinition = DefineFunction({
         description: "Message to the recipient",
       },
     },
-    required: ["message"],
+    required: ["message", "recipient"],
   },
   output_parameters: {
     properties: {
