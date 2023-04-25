@@ -4,7 +4,7 @@ import GreetingWorkflow from "./workflows/greeting_workflow.ts";
 /**
  * The app manifest contains the app's configuration. This
  * file defines attributes like app name and description.
- * https://api.slack.com/future/manifest
+ * https://api.slack.com/automation/manifest
  */
 export default Manifest({
   name: "deno-hello-world",

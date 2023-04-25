@@ -4,7 +4,7 @@ import { DefineFunction, Schema, SlackFunction } from "deno-slack-sdk/mod.ts";
  * Functions are reusable building blocks of automation that accept
  * inputs, perform calculations, and provide outputs. Functions can
  * be used independently or as steps in workflows.
- * https://api.slack.com/future/functions/custom
+ * https://api.slack.com/automation/functions/custom
  */
 export const GreetingFunctionDefinition = DefineFunction({
   callback_id: "greeting_function",
