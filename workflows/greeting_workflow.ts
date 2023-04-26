@@ -2,9 +2,9 @@ import { DefineWorkflow, Schema } from "deno-slack-sdk/mod.ts";
 import { GreetingFunctionDefinition } from "../functions/greeting_function.ts";
 
 /**
- * A Workflow is a set of steps that are executed in order.
- * Each step in a Workflow is a function.
- * https://api.slack.com/future/workflows
+ * A workflow is a set of steps that are executed in order.
+ * Each step in a workflow is a function.
+ * https://api.slack.com/automation/workflows
  */
 const GreetingWorkflow = DefineWorkflow({
   callback_id: "greeting_workflow",
@@ -26,7 +26,7 @@ const GreetingWorkflow = DefineWorkflow({
 /**
  * For collecting input from users, we recommend the
  * built-in OpenForm function as a first step.
- * https://api.slack.com/future/functions#open-a-form
+ * https://api.slack.com/automation/functions#open-a-form
  */
 const inputForm = GreetingWorkflow.addStep(
   Schema.slack.functions.OpenForm,

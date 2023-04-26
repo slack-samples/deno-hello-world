@@ -1,0 +1,21 @@
+name: Execute End-to-end with CircleCI
+
+on:
+  # push:
+  pull_request:
+    branches: [main]
+
+jobs:
+  execute:
+    if: github.repository == 'slack-samples/deno-hello-world'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Capture triggering branch name
+        run: echo "BRANCH_NAME=${GITHUB_HEAD_REF#refs/heads/}" >> $GITHUB_ENV
+      - name: Trigger CircleCI build-beta workflow.
+        uses: promiseofcake/circleci-trigger-action@v1
+        with:
+          user-token: ${{ secrets.CIRCLECI_TOKEN }}
+          project-slug: slackapi/slack-cli
+          branch: main
+          payload: '{"run_local_build_test_workflow": true, "deno_hello_world_template_branch": "${{env.BRANCH_NAME}}"}'

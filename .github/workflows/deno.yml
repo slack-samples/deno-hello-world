@@ -1,4 +1,4 @@
-name: Deno
+name: Deno app build and testing
 
 on:
   push:
@@ -8,7 +8,9 @@ on:
 
 jobs:
   deno:
+    if: github.repository == 'slack-samples/deno-hello-world'
     runs-on: ubuntu-latest
+    timeout-minutes: 5
 
     steps:
       - name: Setup repo
@@ -26,4 +28,7 @@ jobs:
         run: deno lint
 
       - name: Run tests
-        run: deno test
+        run: deno task test
+
+      - name: Run type check
+        run: deno check *.ts && deno check **/*.ts
