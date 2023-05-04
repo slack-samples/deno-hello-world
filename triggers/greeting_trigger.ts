@@ -1,4 +1,5 @@
 import { Trigger } from "deno-slack-sdk/types.ts";
+import { TriggerContextData } from "deno-slack-api/mod.ts";
 import GreetingWorkflow from "../workflows/greeting_workflow.ts";
 
 /**
@@ -14,10 +15,10 @@ const greetingTrigger: Trigger<typeof GreetingWorkflow.definition> = {
   workflow: "#/workflows/greeting_workflow",
   inputs: {
     interactivity: {
-      value: "{{data.interactivity}}",
+      value: TriggerContextData.Shortcut.interactivity,
     },
     channel: {
-      value: "{{data.channel_id}}",
+      value: TriggerContextData.Shortcut.channel_id,
     },
   },
 };
