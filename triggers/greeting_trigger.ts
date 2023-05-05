@@ -1,5 +1,5 @@
 import { Trigger } from "deno-slack-sdk/types.ts";
-import { TriggerContextData } from "deno-slack-api/mod.ts";
+import { TriggerContextData, TriggerTypes } from "deno-slack-api/mod.ts";
 import GreetingWorkflow from "../workflows/greeting_workflow.ts";
 
 /**
@@ -9,7 +9,7 @@ import GreetingWorkflow from "../workflows/greeting_workflow.ts";
  * https://api.slack.com/automation/triggers
  */
 const greetingTrigger: Trigger<typeof GreetingWorkflow.definition> = {
-  type: "shortcut",
+  type: TriggerTypes.Shortcut,
   name: "Send a greeting",
   description: "Send greeting to channel",
   workflow: "#/workflows/greeting_workflow",
