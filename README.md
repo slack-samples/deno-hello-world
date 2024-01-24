@@ -1,6 +1,6 @@
 # Hello World
 
-This automation demonstrates sending a greeting to channel.
+This automation demonstrates sending a greeting to a Slack channel.
 
 **Guide Outline**:
 
