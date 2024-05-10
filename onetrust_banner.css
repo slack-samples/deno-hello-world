@@ -1,0 +1,31 @@
+#onetrust-banner-sdk>div>div.ot-sdk-container{max-width:1280px;width:90%}
+@media only screen and (max-width:896px){#onetrust-banner-sdk #onetrust-group-container{width:100%!important}
+#onetrust-banner-sdk #onetrust-group-container #onetrust-policy{margin-bottom:0}
+}
+#onetrust-banner-sdk #onetrust-group-container #onetrust-policy-text,#onetrust-banner-sdk #onetrust-group-container .ot-b-addl-desc{font-size:.9rem}
+#onetrust-banner-sdk #onetrust-group-container #onetrust-policy-text a{font-weight:400;margin-left:0;text-decoration:none}
+#onetrust-banner-sdk #onetrust-group-container #onetrust-policy-text a:focus{outline:0}
+#onetrust-banner-sdk #onetrust-button-group-parent.has-reject-all-button #onetrust-button-group{flex-direction:column;gap:4px;display:flex;margin-left:0}
+@media only screen and (min-width:1280px){#onetrust-banner-sdk #onetrust-button-group-parent.has-reject-all-button #onetrust-button-group{max-width:250px;margin:0 auto}
+}
+#onetrust-banner-sdk #onetrust-button-group-parent.has-reject-all-button #onetrust-button-group button{padding:7px}
+@media only screen and (max-width:1024px){#onetrust-banner-sdk #onetrust-button-group-parent.has-reject-all-button{margin-top:0;width:32%}
+}
+@media only screen and (max-width:896px){#onetrust-banner-sdk #onetrust-button-group-parent.has-reject-all-button{padding:0!important;width:100%!important}
+}
+@media only screen and (max-width:767px){#onetrust-banner-sdk #onetrust-button-group-parent.has-reject-all-button #onetrust-button-group{width:100%;align-items:center}
+#onetrust-banner-sdk #onetrust-button-group-parent.has-reject-all-button #onetrust-button-group button{width:100%}
+}
+#onetrust-banner-sdk #onetrust-button-group-parent #onetrust-button-group{display:flex;gap:12px;flex-direction:row;justify-content:flex-end;margin-top:0}
+@media only screen and (max-width:1280px){#onetrust-banner-sdk #onetrust-button-group-parent #onetrust-button-group{gap:4px;flex-direction:column}
+}
+@media only screen and (max-width:896px){#onetrust-banner-sdk #onetrust-button-group-parent #onetrust-button-group{margin-right:0;margin-bottom:12px;width:100%!important}
+}
+#onetrust-banner-sdk #onetrust-button-group-parent #onetrust-button-group button{border-radius:4px;padding:10px;min-width:175px;text-transform:uppercase;text-decoration:none;margin:0}
+#onetrust-banner-sdk #onetrust-button-group-parent #onetrust-button-group #onetrust-accept-btn-handler{order:1}
+#onetrust-banner-sdk #onetrust-button-group-parent #onetrust-button-group #onetrust-reject-all-handler{order:2}
+#onetrust-banner-sdk #onetrust-button-group-parent #onetrust-button-group #onetrust-pc-btn-handler{order:3}
+#onetrust-banner-sdk #onetrust-button-group-parent #onetrust-button-group #onetrust-pc-btn-handler.cookie-setting-link{border:1px solid #592466;margin-bottom:0;color:#4a154b}
+#onetrust-banner-sdk #onetrust-button-group-parent #onetrust-button-group #onetrust-accept-btn-handler:hover,#onetrust-banner-sdk #onetrust-button-group-parent #onetrust-button-group #onetrust-reject-all-handler:hover{background-color:#4a154b;border-color:#4a154b;opacity:1}
+#onetrust-banner-sdk #onetrust-close-btn-container .onetrust-close-btn-handler{visibility:hidden}
+#onetrust-banner-sdk #onetrust-close-btn-container .onetrust-close-btn-handler::after{visibility:visible;content:'';background-image:url(data:image/svg+xml;base64,PHN2ZyBhcmlhLWhpZGRlbj0iIiB3aWR0aD0iMTgiIGhlaWdodD0iMTgiIGNsYXNzPSJjLW9uZXRydXN0LWNsb3NlLWJ1dHRvbiIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB2aWV3Qm94PSItMjU1IDM0NyAxMDAgMTAwIj48dGl0bGU+SGlkZSBhbm5vdW5jZW1lbnQ8L3RpdGxlPjxwYXRoIGQ9Ik0tMTYwLjQgNDM0LjJsLTM3LjItMzcuMiAzNy4xLTM3LjEtNy03LTM3LjEgMzcuMS0zNy4xLTM3LjEtNyA3IDM3LjEgMzcuMS0zNy4yIDM3LjIgNy4xIDcgMzcuMS0zNy4yIDM3LjIgMzcuMiI+PC9wYXRoPjwvc3ZnPg==);display:block;width:100%;height:100%;zoom:.7;background-repeat:no-repeat;background-position:center}
