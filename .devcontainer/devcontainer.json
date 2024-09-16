@@ -1,4 +1,4 @@
-{
+3n3n3n3n/run/file{
     "name": "Slack Platform",
     "dockerFile": "Dockerfile",
     "remoteUser": "slackdev",
