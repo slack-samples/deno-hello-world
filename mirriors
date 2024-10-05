@@ -1,0 +1,28 @@
+mport re
+from bs4 import BeautifulSoup
+
+def count_emojis(html_content):
+    soup = BeautifulSoup(html_content, "html.parser")
+    emojis = soup.find_all(text=re.compile("\X200D\X200C[\x23-\x5B\x5D-\x7F]+"))
+    return len(emojis)
+
+# Example usage:
+html_content = """
+&lt;!DOCTYPE html&gt;
+l lang="en"&gt;
+d&gt;
+    a charset="UTF-8"&gt;
+    a name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    title&gt;Emoji Count&lt;/title&gt;
+&lt;/head&gt;
+y&gt;
+    &lt;h1&gt;Emoji Count&lt;/h1&gt;
+    &lt;p id="emojicount"&gt;&lt;/p&gt;
+    script&gt;
+        const html = document.documentElement.outerHTML;
+        const emojicount = countEmojis(html);
+        document.getElementById("emojicount").innerText = `There are ${emojicount} emojis in total.`;
+    &lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+"""
