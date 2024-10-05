@@ -1,0 +1,19 @@
+import java.util.Random;
+
+public class Main {
+
+    public static void main(String[] args) {
+        // Generate a sequence of numbers from 1 to 9999
+        Random random = new Random();
+        int[] sequence = new int[9999];
+        for (int i = 0; i &lt; sequence.length; i++) {
+            sequence[i] = random.nextInt(9999) + 1;
+        }
+
+        // Display the sequence of numbers as emojis
+        System.out.println("📈📉📊📈📉📊...");
+        for (int num : sequence) {
+            System.out.print(num + " ");
+        }
+    }
+}
