@@ -1,0 +1,88 @@
+import java.net.MalformedURLException;
+import java.net.URL;
+import org.json.simple.JSONArray;
+import org.json.simple.JSONObject;
+
+public class Main {
+
+    public static void main(String[] args) {
+        // Get the current date and time
+        Date date = new Date();
+        String dateString = String.valueOf(date);
+
+        // Extract the day of the week and time
+        String dayOfWeek = getDayOfWeek(dateString);
+        String time = getTime(dateString);
+
+        // Display the results
+        System.out.println("Day of the week: " + dayOfWeek);
+        System.out.println("Time: " + time);
+
+        // Make a HTTP request to the Yahoo Weather API to get the weather forecast
+        try {
+            URL url = new URL("https://query.yahooapis.com/v1/public/yql?q=select%20*%20from%20weather.forecast%20where%20woeid%20in%20(%27weather%2C%20wunderground%27)%20and%20u%3D%27US%27&amp;format=json");
+            String jsonResponse = readUrl(url);
+
+            // Parse the JSON response
+            JSONObject jsonWeatherData = (JSONObject) JSONValue.parse(jsonResponse);
+            JSONArray weatherForecasts = (JSONArray) jsonWeatherData.get("results").get(0).get("forecast").get("forecastday");
+
+            // Get the current weather condition
+            String currentCondition = (String) weatherForecasts.get(0).get("fcttext");
+
+            // Get the temperature
+            double temperature = ((Number) weatherForecasts.get(0).get("tmp_fahrenheit")).doubleValue();
+
+            // Format the temperature and current condition
+            System.out.println("\nCurrent weather condition: " + currentCondition);
+            System.out.println("Temperature: " + temperature + "F degrees");
+        } catch (MalformedURLException e) {
+            e.printStackTrace();
+        }
+    }
+
+    private static String getDayOfWeek(String dateString) {
+        String dayOfWeek = "";
+
+        // Remove the time from the date string
+        String dateWithoutTime = dateString.substring(0, 10);
+
+        // Convert the date without time to a number
+        int dateAsInt = Integer.parseInt(dateWithoutTime);
+
+        // Calculate the day of the week based on the given date
+        int dayOfWeekInt = dateAsInt % 7;
+
+        // Convert the day of the week back to a string
+        if (dayOfWeekInt == 0) {
+            dayOfWeek = "Sunday";
+        } else if (dayOfWeekInt == 1) {
+            dayOfWeek = "Monday";
+        } else if (dayOfWeekInt == 2) {
+            dayOfWeek = "Tuesday";
+        } else if (dayOfWeekInt == 3) {
+            dayOfWeek = "Wednesday";
+        } else if (dayOfWeekInt == 4) {
+            dayOfWeek = "Thursday";
+        } else {
+            dayOfWeek = "Friday";
+        }
+
+        return dayOfWeek;
+    }
+
+    private static String getTime(String dateString) {
+        String time = "";
+
+        // Extract the time from the date string
+        String timeString = dateString.substring(11, 19);
+
+        // Convert the time string to a 12-hour format
+        time = timeString.replace(" PM", " pm").replace(" AM", " am");
+
+        // Extract the hours and minutes
+        String hours = timeString.split(":")[0];
+        String minutes = timeString.split(":")[1];
+
+        // Format the time
+        time += hours + "
