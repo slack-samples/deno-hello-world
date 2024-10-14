@@ -1,0 +1,9 @@
+import rasa_core
+from rasa_core.agent import Agent
+from rasa_core.utils import EndpointConfig
+
+# Load the trained model
+agent = Agent.load("models/rasa/my_model", endpoint=EndpointConfig(url="http://localhost:5005/"))
+
+# Start the chatbot
+agent.handle_conversation(sender_id="user1")
