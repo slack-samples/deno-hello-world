@@ -30,7 +30,7 @@
     "test": "deno fmt --check && deno lint && deno test --allow-read"
   },
   "imports": {
-    "@std/assert": "jsr:@std/assert@^1.0.13",
+    "@std/assert": "jsr:@std/assert@^1.0.15",
     "deno-slack-sdk/": "https://deno.land/x/deno_slack_sdk@2.15.1/",
     "deno-slack-api/": "https://deno.land/x/deno_slack_api@2.8.0/"
   }
