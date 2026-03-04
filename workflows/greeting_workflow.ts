@@ -1,4 +1,4 @@
-import { DefineWorkflow, Schema } from "@slack/sdk";
+import { DefineWorkflow, Schema } from "deno-slack-sdk/mod.ts";
 import { GreetingFunctionDefinition } from "../functions/greeting_function.ts";
 
 /**

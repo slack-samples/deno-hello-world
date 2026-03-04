@@ -1,4 +1,4 @@
-import { SlackFunctionTester } from "@slack/sdk";
+import { SlackFunctionTester } from "deno-slack-sdk/mod.ts";
 import { assert } from "@std/assert";
 import GreetingFunction from "./greeting_function.ts";
 
