@@ -1,4 +1,4 @@
-import { Manifest } from "@slack/sdk";
+import { Manifest } from "deno-slack-sdk/mod.ts";
 import GreetingWorkflow from "./workflows/greeting_workflow.ts";
 
 /**
